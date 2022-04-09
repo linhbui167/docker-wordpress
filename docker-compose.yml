@@ -10,10 +10,10 @@ services:
       - ./src/plugins/:/var/www/html/wp-content/plugins
       - ./src/uploads/:/var/www/html/wp-content/uploads
       - ./uploads.conf:/usr/local/etc/php/conf.d/uploads.ini
-    ports:
-      - 80:80
     env_file:
       - ./.env
+    ports:
+      - 8000:80
     environment:
       - WORDPRESS_DB_HOST=mysql-wordpress
       - WORDPRESS_DB_USER=${DB_USER}
@@ -31,7 +31,7 @@ services:
     env_file:
       - ./.env
     ports:
-      - 3000:3000
+      - 3000:80
       - 3001:3001
     volumes:
       - ./src/themes/:/var/www/html/themes

@@ -1,2 +1,5 @@
 /src/node_modules
+/src/uploads
+/src/plugins
+/src/themes
 /build
